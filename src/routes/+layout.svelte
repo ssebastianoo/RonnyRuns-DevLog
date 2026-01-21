@@ -86,7 +86,7 @@
 					<input
 						bind:this={inputRef}
 						type="text"
-						class="rounded border border-accent bg-card px-2 py-1 outline-0"
+						class="-my-px rounded bg-card px-2 py-px outline-1 outline-accent"
 						placeholder="Cerca..."
 						bind:value={searchValue}
 						onkeypress={handleKeyPress}
