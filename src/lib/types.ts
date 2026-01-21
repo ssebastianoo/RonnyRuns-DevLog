@@ -1,3 +1,5 @@
+import type { Snippet } from "svelte"
+
 export type Post = {
     title: string
     slug: string
@@ -6,3 +8,8 @@ export type Post = {
     tags: string[]
     published: boolean
 }
+
+export type MarkdownModule = {
+    default: Snippet;
+    metadata: Omit<Post, 'slug'>;
+};

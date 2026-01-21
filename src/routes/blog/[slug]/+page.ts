@@ -1,12 +1,6 @@
 import { error } from '@sveltejs/kit';
 import type { PageLoad } from './$types';
-import type { Post } from '$lib/types';
-import type { Snippet } from "svelte";
-
-type MarkdownModule = {
-    default: Snippet;
-    metadata: Omit<Post, 'slug'>;
-};
+import type { Post, MarkdownModule } from '$lib/types';
 
 const posts = import.meta.glob<MarkdownModule>(
     '/src/posts/*.md'

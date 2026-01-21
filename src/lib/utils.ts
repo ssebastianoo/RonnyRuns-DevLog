@@ -1,10 +1,6 @@
-import type { Post } from './types';
+import type { Post, MarkdownModule } from './types';
 
 export function getPosts(): Post[] {
-    type MarkdownModule = {
-        metadata: Omit<Post, 'slug'>;
-    };
-
     const modules = import.meta.glob<MarkdownModule>(
         '/src/posts/*.md',
         { eager: true }
